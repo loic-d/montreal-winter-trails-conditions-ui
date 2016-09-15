@@ -1,20 +1,32 @@
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 import { Colors, Metrics, ApplicationStyles } from '../../Themes/'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
-  logo: {
-    height: Metrics.images.logo,
-    width: Metrics.images.logo,
-    resizeMode: 'contain'
+  weatherContainer: {
+    flex: 0.7,
+    justifyContent: 'center',
+    margin: 2,
+    paddingTop: 20,
+    paddingBottom: 20,
+    alignItems: 'center',
+    backgroundColor: Colors.ricePaper
   },
-  centered: {
-    alignItems: 'center'
+  weatherTemperature: {
+    fontSize: 75,
+    marginBottom: 5,
+    color: Colors.seaBlue,
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
+  },
+  weatherTemperatureLike: {
+    fontSize: 25,
+    color: Colors.seaBlue,
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
   },
   homeBoxesContainer: {
-      flex: 1,
+      flex: 0.3,
       flexDirection: 'row',
-      marginTop: 60,
+      marginTop: 2,
       marginBottom: 5
   },
   homeBox: {
@@ -29,7 +41,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     lineHeight: 35,
-    fontWeight: '300',
-    color: 'snow'
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
+    color: Colors.snow
   },
 })

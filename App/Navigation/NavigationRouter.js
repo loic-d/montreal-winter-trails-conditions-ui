@@ -6,6 +6,8 @@ import NavItems from './NavItems'
 
 // screens identified by the router
 import HomeScreen from '../Containers/HomeScreen'
+import TrailsListScreen from '../Containers/TrailsListScreen'
+
 import PresentationScreen from '../Containers/PresentationScreen'
 import AllComponentsScreen from '../Containers/AllComponentsScreen'
 import UsageExamplesScreen from '../Containers/UsageExamplesScreen'
@@ -29,7 +31,10 @@ class NavigationRouter extends Component {
       <Router>
         <Scene key='drawer' component={NavigationDrawer} open={false}>
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene initial key='homeScreen' component={HomeScreen} title='Montreal Ski & Trails' renderLeftButton={NavItems.hamburgerButton} />
+            <Scene initial key='home' component={HomeScreen} title='Montreal Ski & Trails' renderLeftButton={NavItems.hamburgerButton} />
+            <Scene key='trailsList' component={TrailsListScreen} title='All trails' />
+
+
             <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
             <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' component={LoginScreen} title='Login' hideNavBar />

@@ -6,9 +6,9 @@ const colors = {
   silver: '#F7F7F7',
   steel: '#CCCCCC',
   error: 'rgba(200, 0, 0, 0.8)',
-  ricePaper: 'rgba(255,255,255, 0.75)',
+  ricePaper: 'rgba(255,255,255, 0.7)',
   frost: '#D8D8D8',
-  cloud: 'rgba(200,200,200, 0.35)',
+  cloud: 'rgba(200,200,200, 0.4)',
   windowTint: 'rgba(0, 0, 0, 0.4)',
   panther: '#161616',
   charcoal: '#595959',
@@ -20,7 +20,8 @@ const colors = {
   drawer: 'rgba(30, 30, 29, 0.95)',
   paleBlue: '#a7cced',
   arsenic: '#3a445d',
-  seaBlue: '#006494'
+  seaBlue: 'rgba(0, 100, 148, 0.9)',
+  lightBlack: '#0e1111'
 }
 
 export default colors
