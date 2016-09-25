@@ -12,36 +12,69 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.ricePaper
   },
+  weatherCity: {
+    fontSize: 55,
+    marginTop: 20,
+    marginBottom: 12,
+    color: Colors.seaBlue,
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto'
+  },
   weatherTemperature: {
     fontSize: 75,
-    marginBottom: 5,
+    marginBottom: 0,
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
   },
-  weatherTemperatureLike: {
-    fontSize: 25,
+  weatherTemperatureRange: {
+    fontSize: 20,
+    marginBottom: 8,
     color: Colors.seaBlue,
-    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
+  },
+  weatherInlineContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 50
+  },
+  weatherHumidity: {
+    flex: 0.4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontSize: 18,
+    color: Colors.seaBlue,
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
+  },
+  weatherWindSpeed: {
+    flex: 0.6,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontSize: 18,
+    color: Colors.seaBlue,
+    fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
   },
   homeBoxesContainer: {
-      flex: 0.3,
+      flex: 0.4,
       flexDirection: 'row',
-      marginTop: 2,
-      marginBottom: 5
+      marginTop: 1,
+      marginBottom: 1,
+      alignItems: 'stretch'
   },
-  homeBox: {
-      flex: 0.5,
+  homeBoxItem: {
+      flex: 1,
       justifyContent: 'center',
-      height: 160,
+      alignItems: 'center',
       backgroundColor: Colors.seaBlue,
-      margin: 2,
+      margin: 1,
       padding: 20
   },
   homeBoxText: {
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: 30,
     lineHeight: 35,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
     color: Colors.snow
-  },
+  }
 })

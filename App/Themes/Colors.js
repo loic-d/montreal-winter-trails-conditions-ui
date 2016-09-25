@@ -20,7 +20,7 @@ const colors = {
   drawer: 'rgba(30, 30, 29, 0.95)',
   paleBlue: '#a7cced',
   arsenic: '#3a445d',
-  seaBlue: 'rgba(0, 100, 148, 0.9)',
+  seaBlue: 'rgba(0, 100, 148, 0.95)',
   lightBlack: '#0e1111'
 }
 
