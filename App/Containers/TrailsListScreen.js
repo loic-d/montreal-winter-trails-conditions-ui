@@ -1,8 +1,9 @@
 import React from 'react'
 import { ListView, ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
+import { Images, Metrics } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 // Styles
 import styles from './Styles/TrailsListScreenStyle'
@@ -38,9 +39,14 @@ export default class TrailsListScreen extends React.Component {
 
   _renderRow (rowData) {
     return (
-      <View style={styles.row}>
-        <Text style={styles.boldLabel}>{rowData.nom}</Text>
-        <Text style={styles.label}>{rowData.condition}</Text>
+      <View style={styles.trailListItem}>
+        <View style={styles.trailListTextContainer}>
+          <Text style={styles.trailListItemName}>{rowData.nom}</Text>
+          <Text style={styles.trailListItemLocation}>{rowData.arrondissement.nom_arr}</Text>
+        </View>
+        <View style={styles.traiListItemArrowContainer}>
+          <Icon name='keyboard-arrow-right' size={Metrics.icons.medium} style={styles.traiListItemArrow}/>
+        </View>
       </View>
     )
   }

@@ -76,10 +76,8 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.weatherCity}>{this.state.city}</Text>
             <Text style={styles.weatherTemperature}>{this.state.temp}°</Text>
             <Text style={styles.weatherTemperatureRange}>{this.state.temp_min}° min / {this.state.temp_max}° max</Text>
-            <View style={styles.weatherInlineContainer}>
-              <Text style={styles.weatherHumidity}>{this.state.humidity}% humidity</Text>
-              <Text style={styles.weatherWindSpeed}>Wind speed: {this.state.wind_speed} m/s</Text>
-            </View>
+            <Text style={styles.weatherHumidity}>{this.state.humidity}% humidity</Text>
+            <Text style={styles.weatherWindSpeed}>Wind speed: {this.state.wind_speed} m/s</Text>
           </View>
           <View style={styles.homeBoxesContainer}>
               <TouchableOpacity onPress={NavigationActions.trailsList} style={styles.homeBoxItem}>

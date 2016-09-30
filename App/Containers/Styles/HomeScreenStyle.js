@@ -14,14 +14,14 @@ export default StyleSheet.create({
   },
   weatherCity: {
     fontSize: 55,
-    marginTop: 20,
-    marginBottom: 12,
+    marginTop: 15,
+    marginBottom: 8,
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto'
   },
   weatherTemperature: {
     fontSize: 75,
-    marginBottom: 0,
+    marginBottom: 15,
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
   },
@@ -31,27 +31,15 @@ export default StyleSheet.create({
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
   },
-  weatherInlineContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    height: 50
-  },
   weatherHumidity: {
-    flex: 0.4,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
     fontSize: 18,
+    marginBottom: 8,
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
   },
   weatherWindSpeed: {
-    flex: 0.6,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
     fontSize: 18,
+    marginBottom: 8,
     color: Colors.seaBlue,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Regular' : 'Roboto',
   },

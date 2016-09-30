@@ -5,28 +5,36 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
     flex: 1,
-    marginTop: Metrics.navBarHeight,
     backgroundColor: Colors.background
   },
-  row: {
+  trailListItem: {
     flex: 1,
-    backgroundColor: Colors.fire,
-    marginVertical: Metrics.smallMargin,
-    justifyContent: 'center'
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 14,
+    paddingBottom: 14,
+    paddingLeft: 10,
+    borderBottomColor: Colors.seaBlue,
+    borderBottomWidth: 1,
+    marginLeft: 5,
+    marginRight: 5
   },
-  boldLabel: {
-    fontWeight: 'bold',
-    alignSelf: 'center',
-    color: Colors.snow,
-    textAlign: 'center',
-    marginBottom: Metrics.smallMargin
+  trailListTextContainer: {
+    flex:0.9
   },
-  label: {
-    textAlign: 'center',
-    color: Colors.snow
+  trailListItemName: {
+    color: Colors.seaBlue,
+    fontSize: 16,
+    marginBottom: 8
   },
-  listContent: {
-    marginTop: Metrics.baseMargin
+  trailListItemLocation: {
+    color: Colors.charcoal,
+    fontSize: 13
+  },
+  traiListItemArrowContainer: {
+    flex: 0.1
+  },
+  traiListItemArrow: {
+    color: Colors.seaBlue
   }
-
 })
