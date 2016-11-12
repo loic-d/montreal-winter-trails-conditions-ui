@@ -7,6 +7,7 @@ import NavItems from './NavItems'
 // screens identified by the router
 import HomeScreen from '../Containers/HomeScreen'
 import TrailsListScreen from '../Containers/TrailsListScreen'
+import TrailDetailsScreen from '../Containers/TrailDetailsScreen'
 
 import PresentationScreen from '../Containers/PresentationScreen'
 import AllComponentsScreen from '../Containers/AllComponentsScreen'
@@ -33,6 +34,7 @@ class NavigationRouter extends Component {
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
             <Scene initial key='home' component={HomeScreen} title='Winter Trails Conditions' renderLeftButton={NavItems.hamburgerButton} />
             <Scene key='trailsList' component={TrailsListScreen} title='All Winter Trails' />
+            <Scene key='trailDetails' component={TrailDetailsScreen} title='This Trail' />
 
 
             <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />

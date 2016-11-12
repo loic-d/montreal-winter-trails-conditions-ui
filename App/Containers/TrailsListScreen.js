@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListView, ScrollView, Text, Image, View } from 'react-native'
+import { TouchableOpacity, ListView, ScrollView, Text, Image, View } from 'react-native'
 import { Images, Metrics } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
@@ -13,7 +13,7 @@ const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 export default class TrailsListScreen extends React.Component {
 
   constructor () {
-    super()
+    super();
     this.state = {
       trails: ds.cloneWithRows([])
     }
@@ -36,10 +36,11 @@ export default class TrailsListScreen extends React.Component {
       })
   }
 
-
   _renderRow (rowData) {
+    const navigateToTrailDetails = () => NavigationActions.trailDetails({trailDetails: {displayName: rowData.nom, id: rowData.id}});
+
     return (
-      <View style={styles.trailListItem}>
+      <TouchableOpacity onPress={navigateToTrailDetails} style={styles.trailListItem}>
         <View style={styles.trailListTextContainer}>
           <Text style={styles.trailListItemName}>{rowData.nom}</Text>
           <Text style={styles.trailListItemLocation}>{rowData.arrondissement.nom_arr}</Text>
@@ -47,7 +48,7 @@ export default class TrailsListScreen extends React.Component {
         <View style={styles.traiListItemArrowContainer}>
           <Icon name='keyboard-arrow-right' size={Metrics.icons.medium} style={styles.traiListItemArrow}/>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 
@@ -55,7 +56,7 @@ export default class TrailsListScreen extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <ListView
-          contentContainerStyle={styles.listContent}
+          contentContainerStyle={styles.trailList}
           dataSource={this.state.trails}
           renderRow={this._renderRow}
           pageSize={15}

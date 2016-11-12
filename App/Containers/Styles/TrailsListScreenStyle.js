@@ -7,6 +7,11 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background
   },
+  trailList: {
+    //flex: 1,
+    //flexDirection: 'column',
+    //flexWrap: 'wrap'
+  },
   trailListItem: {
     flex: 1,
     flexDirection: 'row',
@@ -14,10 +19,11 @@ export default StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 14,
     paddingLeft: 10,
-    borderBottomColor: Colors.seaBlue,
+    borderBottomColor: Colors.steel,
     borderBottomWidth: 1,
     marginLeft: 5,
-    marginRight: 5
+    marginRight: 5,
+    height: 95
   },
   trailListTextContainer: {
     flex:0.9
