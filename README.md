@@ -1,64 +1,30 @@
-#  MontrealSkiTrailsConditions
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+#  Montreal Open Data winter trails conditions React Native App
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+Work in progress.
 
-## :arrow_up: How to Setup
+This React Native App displays the current Montreal winter trails conditions fetched from [a simple NodeJS REST application](https://github.com/loic-d/montreal-winter-trails-conditions-service/).
+You can set-up your own back-end data service and extend this application to display any kind of data.
+For faster development, [Ignite](https://github.com/infinitered/ignite) as been used. Ignite is a great React Native boilerplate that provides useful features (Routing, UI Components & styles, Testing, API wrapper, I18n, CLI) to get you up and running quickly.
 
-**Step 1:** git clone this repo:
+The App contains 3 screens:
+* Home
+* List of trails
+* Trail details
 
-**Step 2:** cd to the cloned repo:
+## How to Setup
 
-**Step 3:** Install the Application with `npm install`
+* Install [React Native](https://facebook.github.io/react-native/) if you don't have it on your machine yet
 
+* If you want to use the Montreal winter trails conditions data service, you will first have to [set-up and run the project locally](https://github.com/loic-d/montreal-winter-trails-conditions-service/) and generate an applicationID on [Open Weather App(]http://openweathermap.org/)
 
-## :arrow_forward: How to Run App
+* `git clone git@github.com:loic-d/montreal-winter-trails-conditions-ui.git`
 
-1. cd to the repo
-2. Run Build for either OS
-  * for iOS
-    * run `react-native run-ios`
-  * for Android
-    * Run Genymotion
-    * run `react-native run-android`
+* `cd montreal-winter-trails-conditions-ui`
 
-## :no_entry_sign: Standard Compliant
+* `npm install`
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-This project adheres to Standard.  Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
+* In `/App/Config/AppSettings.js`, replace your Open Weather Map ApplicationID
 
-**To Lint on Commit**
+* To build for iOS, run `react-native run-ios`
 
-This is implemented using [ghooks](https://github.com/gtramontina/ghooks). There is no additional setup needed.
-
-**Bypass Lint**
-
-If you have to bypass lint for a special commit that you will come back and clean (pushing something to a branch etc.) then you can bypass git hooks with adding `--no-verify` to your commit command.
-
-**Understanding Linting Errors**
-
-The linting rules are from JS Standard and React-Standard.  [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
-
-## :closed_lock_with_key: Secrets
-
-This project uses [react-native-config](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native. You can store API keys
-and other sensitive information in a `.env` file:
-
-```
-API_URL=https://myapi.com
-GOOGLE_MAPS_API_KEY=abcdefgh
-```
-
-and access them from React Native like so:
-
-```
-import Secrets from 'react-native-config'
-
-Secrets.API_URL  // 'https://myapi.com'
-Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
-```
-
-The `.env` file is ignored by git keeping those secrets out of your repo.
-
-## :open_file_folder: Related Articles
-Ignite Documentation - [Ignite Wiki https://github.com/infinitered/ignite/wiki](https://github.com/infinitered/ignite/wiki)
+* To build for Android, run Genymotion and `react-native run-android`

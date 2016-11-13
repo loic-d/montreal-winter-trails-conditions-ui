@@ -3,7 +3,7 @@ const APP_SETTINGS = {
     trailsService: "http://localhost:8080/api/trailsCondition",
     weatherService: {
       baseUrl: "http://api.openweathermap.org/data/2.5/",
-      appId: "c011838093e799a52af75f231aac0774",
+      appId: "<YOUR-APP-ID-HERE>",
       montrealId: "6077243"
     }
   }
