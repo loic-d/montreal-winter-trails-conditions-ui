@@ -61,7 +61,7 @@ export default StyleSheet.create({
   homeBoxText: {
     textAlign: 'center',
     fontSize: 30,
-    lineHeight: 35,
+    lineHeight: 50,
     fontFamily: (Platform.OS === 'ios') ? 'PingFangHK-Thin' : 'Roboto',
     color: Colors.snow
   }

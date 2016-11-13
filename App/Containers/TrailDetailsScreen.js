@@ -6,6 +6,9 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 
 import appSettings from './../Config/AppSettings'
 
+// I18ns
+import I18n from 'react-native-i18n'
+
 // Styles
 import styles from './Styles/TrailDetailsScreenStyle'
 
@@ -43,7 +46,7 @@ export default class TrailDetailsScreen extends React.Component {
             trail_clear: responseJson.deblaye,
             trail_update_date: responseJson.arrondissement.date_maj
           }
-        )
+        );
         console.log('****** STATE ', this.state);
       })
       .catch((error) => {
@@ -54,14 +57,20 @@ export default class TrailDetailsScreen extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Text>HELLO TRAIL DETAILS</Text>
-        <Text>From ROUTER {this.props.trailDetails.displayName}</Text>
-        <Text>{this.state.trail_name}</Text>
-        <Text>{this.state.trail_location}</Text>
-        <Text>{this.state.trail_update_date}</Text>
-        <Text>{this.state.trail_condition}</Text>
-        <Text>{this.state.trail_clear}</Text>
-        <Text>{this.state.trail_opening}</Text>
+        <Image source={Images.background} style={styles.backgroundImage} resizeMode='cover' />
+        <View style={styles.container}>
+          <View style={styles.trailDetailsContainer}>
+            <Text style={styles.trailName}>{this.state.trail_name}</Text>
+            <Text style={styles.trailLocation}>{this.state.trail_location}</Text>
+            <View style={styles.trailInfoSeparator}></View>
+            <View style={styles.trailInfoContainer}>
+              <Text style={styles.trailInfoItem}>{I18n.t('trailCondition')} {this.state.trail_condition}</Text>
+              <Text style={styles.trailInfoItem}>{I18n.t('trailOpened')} {this.state.trail_opening}</Text>
+              <Text style={styles.trailInfoItem}>{I18n.t('trailCleared')} {this.state.trail_clear}</Text>
+              <Text style={styles.trailInfoDate}>{I18n.t('trailLastUpdate')} {this.state.trail_update_date}</Text>
+            </View>
+          </View>
+        </View>
       </View>
     )
   }

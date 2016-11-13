@@ -7,7 +7,7 @@ const APP_SETTINGS = {
       montrealId: "6077243"
     }
   }
-}
+};
 
 export default APP_SETTINGS
 

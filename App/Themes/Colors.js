@@ -7,6 +7,7 @@ const colors = {
   steel: '#CCCCCC',
   error: 'rgba(200, 0, 0, 0.8)',
   ricePaper: 'rgba(255,255,255, 0.85)',
+  ricePaperWhiter: 'rgba(255,255,255, 0.87)',
   frost: '#D8D8D8',
   cloud: 'rgba(200,200,200, 0.4)',
   windowTint: 'rgba(0, 0, 0, 0.4)',

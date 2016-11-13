@@ -21,5 +21,14 @@
    "apiTesting": "API Testing",
    "themeSettings": "Theme Settings",
    "deviceDetails": "Device Details",
-   "noItems": "No Items"
+   "noItems": "No Items",
+   "viewAllTrails": "VIEW ALL TRAILS CONDITIONS",
+   "windSpeed": "Wind speed:",
+   "humidity": "humidity",
+   "min": "min",
+   "max": "max",
+   "trailCondition": "Condition:",
+   "trailOpened": "Trail Opened:",
+   "trailCleared": "Trail Cleared:",
+   "trailLastUpdate": "Last update:"
 }

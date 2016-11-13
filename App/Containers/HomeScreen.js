@@ -1,12 +1,14 @@
 import React from 'react'
 import { TouchableOpacity, ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
-import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
 // For API
 import API from '../Services/WeatherDataService'
 import FJSON from 'format-json'
+
+// I18ns
+import I18n from 'react-native-i18n'
 
 import appSettings from './../Config/AppSettings'
 
@@ -15,12 +17,12 @@ import styles from './Styles/HomeScreenStyle'
 
 const { montrealId } = appSettings.API.weatherService;
 
-const endpoint = { label: '', endpoint: 'getCityById', args: [montrealId] }
+const endpoint = { label: '', endpoint: 'getCityById', args: [montrealId] };
 
 export default class HomeScreen extends React.Component {
 
   constructor () {
-    super()
+    super();
     this.state = {
         temp: "",
         temp_min: "",
@@ -28,23 +30,23 @@ export default class HomeScreen extends React.Component {
         humidity: "",
         wind_speed: "",
         city: "Montréal"
-    }
+    };
 
     this.api = API.create();
   }
 
   componentDidMount() {
-    this._tryEndpoint(endpoint)
+    this._getWeatherInfo(endpoint)
   }
 
-  showResult (response, title = 'Response') {
+  setWeatherInfoState (response, title = 'Response') {
     if (response.ok) {
       const { temp, humidity, temp_min, temp_max } = response.data.main;
       const { speed } = response.data.wind;
 
-      temp = temp.toFixed(1)
-      temp_min = temp_min.toFixed(1)
-      temp_max = temp_max.toFixed(1)
+      temp = temp.toFixed(1);
+      temp_min = temp_min.toFixed(1);
+      temp_max = temp_max.toFixed(1);
 
       this.setState(
         {
@@ -55,15 +57,13 @@ export default class HomeScreen extends React.Component {
           wind_speed: speed
         }
       )
-    } else {
-      //TODO: SHOW ERROR
     }
   }
 
-  _tryEndpoint (apiEndpoint) {
-    const { label, endpoint, args = [''] } = apiEndpoint
+  _getWeatherInfo (apiEndpoint) {
+    const { label, endpoint, args = [''] } = apiEndpoint;
     this.api[endpoint].apply(this, args).then((result) => {
-      this.showResult(result, label || `${endpoint}(${args.join(', ')})`)
+      this.setWeatherInfoState(result, label || `${endpoint}(${args.join(', ')})`)
     })
   }
 
@@ -74,20 +74,15 @@ export default class HomeScreen extends React.Component {
         <View style={styles.container}>
           <View style={styles.weatherContainer}>
             <Text style={styles.weatherCity}>{this.state.city}</Text>
-            <Text style={styles.weatherTemperature}>{this.state.temp}°</Text>
-            <Text style={styles.weatherTemperatureRange}>{this.state.temp_min}° min / {this.state.temp_max}° max</Text>
-            <Text style={styles.weatherHumidity}>{this.state.humidity}% humidity</Text>
-            <Text style={styles.weatherWindSpeed}>Wind speed: {this.state.wind_speed} m/s</Text>
+            <Text style={styles.weatherTemperature}>{this.state.temp}°C</Text>
+            <Text style={styles.weatherTemperatureRange}>{this.state.temp_min}°C {I18n.t('min')} / {this.state.temp_max}°C {I18n.t('max')}</Text>
+            <Text style={styles.weatherHumidity}>{this.state.humidity}% {I18n.t('humidity')}</Text>
+            <Text style={styles.weatherWindSpeed}>{I18n.t('windSpeed')} {this.state.wind_speed} m/s</Text>
           </View>
           <View style={styles.homeBoxesContainer}>
               <TouchableOpacity onPress={NavigationActions.trailsList} style={styles.homeBoxItem}>
                 <View>
-                    <Text style={styles.homeBoxText}>VIEW ALL TRAILS</Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={NavigationActions.trailsList} style={styles.homeBoxItem}>
-                <View>
-                    <Text style={styles.homeBoxText}>MY FAVORITE TRAILS</Text>
+                    <Text style={styles.homeBoxText}>{I18n.t('viewAllTrails')}</Text>
                 </View>
               </TouchableOpacity>
           </View>
