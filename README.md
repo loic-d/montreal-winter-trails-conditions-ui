@@ -19,7 +19,7 @@ The App contains 3 screens:
 
 * Install [React Native](https://facebook.github.io/react-native/) if you don't have it on your machine yet
 
-* If you want to use the Montreal winter trails conditions data service, you will first have to [set-up and run the project locally](https://github.com/loic-d/montreal-winter-trails-conditions-service/) and generate an applicationID on [Open Weather App(]http://openweathermap.org/)
+* If you want to use the Montreal winter trails conditions data service, you will first have to [set-up and run the project locally](https://github.com/loic-d/montreal-winter-trails-conditions-service/) and generate an applicationID on [Open Weather App](http://openweathermap.org/)
 
 * `git clone git@github.com:loic-d/montreal-winter-trails-conditions-ui.git`
 
