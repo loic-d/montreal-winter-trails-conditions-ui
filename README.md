@@ -11,9 +11,9 @@ The App contains 3 screens:
 * List of trails
 * Trail details
 
-![alt text](https://cloud.githubusercontent.com/assets/3925905/20248008/314de704-a9a9-11e6-9489-a0a15db34649.png "Home Screen")
-![alt text](https://cloud.githubusercontent.com/assets/3925905/20248009/31577184-a9a9-11e6-907e-217de0be8fbd.png "Trails List Screen")
-![alt text](https://cloud.githubusercontent.com/assets/3925905/20248069/5f044ef8-a9aa-11e6-84b7-566347650cdd.png "Trails List Screen")
+![alt text](https://cloud.githubusercontent.com/assets/3925905/20248105/1764a9e8-a9ab-11e6-9e5b-a307befcc735.png "Home Screen")
+![alt text](https://cloud.githubusercontent.com/assets/3925905/20248106/176d45bc-a9ab-11e6-8385-e3eac3e8291e.png "Trails List Screen")
+![alt text](https://cloud.githubusercontent.com/assets/3925905/20248107/176dd90a-a9ab-11e6-88fd-d178b0aa2fd1.png "Trail Details Screen")
 
 ## How to Setup
 
