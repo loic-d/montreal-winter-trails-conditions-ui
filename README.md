@@ -1,10 +1,10 @@
 #  Montreal Open Data winter trails conditions React Native App
 
-(Work in progress.)
+(Project not fully completed: missing tests, code cleanup and refactoring, etc.)
 
-This React Native App displays the current Montreal winter trails conditions fetched from [a simple NodeJS REST application](https://github.com/loic-d/montreal-winter-trails-conditions-service/).
+This React Native App displays the current Montreal winter trails conditions fetched from [a simple NodeJS RESTful service](https://github.com/loic-d/montreal-winter-trails-conditions-service/).
 You can set-up your own back-end data service and extend this application to display any kind of data.
-For faster development, [Ignite](https://github.com/infinitered/ignite) is used. Ignite is a great React Native boilerplate that provides useful features (Routing, UI Components & styles, Testing, API wrapper, I18n, CLI) to get you up and running quickly.
+For faster development, [Ignite](https://github.com/infinitered/ignite) was used. Ignite is a great React Native boilerplate that provides useful features (Routing, UI Components & styles, Testing, API wrapper, I18n, CLI) to get you up and running quickly.
 
 The App contains 3 screens:
 * Home
@@ -17,7 +17,7 @@ The App contains 3 screens:
 
 ## How to Setup
 
-* Install [React Native](https://facebook.github.io/react-native/) if you don't have it on your machine yet
+* Install [React Native](https://facebook.github.io/react-native/) if you don't have it yet
 
 * If you want to use the Montreal winter trails conditions data service, you will first have to [set-up and run the project locally](https://github.com/loic-d/montreal-winter-trails-conditions-service/) and generate an applicationID on [Open Weather App](http://openweathermap.org/)
 
